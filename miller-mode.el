@@ -16,9 +16,6 @@
 
 ;;; Commentary:
 
-;; short description here
-
-;; full doc on how to use here
 
 ;;; Code:
 
@@ -43,14 +40,16 @@
 	     (x-operators-regexp (regexp-opt x-operators 'words)))
 
 	`(
+	  ("\\<\\$[a-zA-Z_][a-zA-Z_0-9]*\\>" . 'font-lock-doc-markup-face)
 	  (,x-builtins-regexp . 'font-lock-preprocessor-face)
 	  (,x-types-regexp . 'font-lock-type-face)
 	  (,x-constants-regexp . 'font-lock-constant-face)
 	  (,x-operators-regexp . 'font-lock-constant-face)
 	  (,x-keywords-regexp . 'font-lock-keyword-face)
+	  ("\\$\\*" . 'font-lock-doc-markup-mode)
+	  ("\\<@[a-zA-Z_][a-zA-Z_0-9]*\\>" . 'font-lock-doc-markup-face)
 	  ("\\(\\<[a-zA-Z_][a-zA-Z_0-9]*\\>\\)[ \t]*(" 1 'font-lock-function-name-face)
-	  ("\\(\\<[a-zA-Z_][a-zA-Z_0-9]*\\>\\)" 'font-lock-variable-name-face)
-	  ("\\(\\$\\<[a-zA-Z_][a-zA-Z_0-9]*\\>\\)" 'font-lock-doc-markup-face)
+	  ("\\(\\<[a-zA-Z_][a-zA-Z_0-9]*\\>\\)" . 'font-lock-variable-name-face)
 	  )))
 
 (defvar mlr-mode-syntax-table nil "Syntax table for `miller-mode'.")
