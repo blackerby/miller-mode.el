@@ -1,0 +1,3 @@
+if (substr($summary_text_file_name, -12, -5) != gssub($action_date, "-", "")) {
+  $summary_text_file_name = ""
+}
