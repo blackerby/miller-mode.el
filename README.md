@@ -13,3 +13,7 @@
 ### emacs manual
 - https://www.gnu.org/software/emacs/manual/html_node/elisp/Faces-for-Font-Lock.html
 - https://www.gnu.org/software/emacs/manual/html_node/elisp/Syntax-Class-Table.html
+### Miller resources
+- https://github.com/johnkerl/miller/blob/main/vim/syntax/mlr.vim
+- https://github.com/johnkerl/miller/blob/main/internal/pkg/parsing/mlr.bnf
+- https://miller.readthedocs.io/en/latest/
