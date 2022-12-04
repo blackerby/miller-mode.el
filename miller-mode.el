@@ -66,6 +66,9 @@
 
   (setq font-lock-defaults '((mlr-font-lock-keywords)))
   (set-syntax-table mlr-mode-syntax-table))
+
+;;;###autoload
+(add-to-list 'auto-mode-alist '("\\.mlr\\'" . miller-mode))
   
  (provide 'miller-mode)
 
